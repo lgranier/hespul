@@ -1,0 +1,2 @@
+module OnduleurEnergyHelper
+end
