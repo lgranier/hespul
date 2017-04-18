@@ -6,5 +6,5 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Onduleur.create(lb :"Onduleur 1", description: "Ceci est l'onduleur 1")
-Onduleur.create(lb :"Onduleur 2", description: "Ceci est l'onduleur 2")
+Onduleur.create(lb: "Onduleur 1", description: "Ceci est l'onduleur 1")
+Onduleur.create(lb: "Onduleur 2", description: "Ceci est l'onduleur 2")

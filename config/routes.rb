@@ -1,9 +1,20 @@
 Rails.application.routes.draw do
-  get 'onduleur_energy/index'
+  get 'days/index'
 
-  get 'onduleur_energy/import'
+  get 'energies/index'
+
+  get 'energies/import'
+
+  #get 'onduleur_energy/index'
+
+  #get 'onduleur_energy/import'
 
   resources :onduleurs
-  resources :onduleur_energy
+  resources :energies do 
+  	collection { post :import, :search }
+  end 
+  resources :days
+
+  root to: "energies#index"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

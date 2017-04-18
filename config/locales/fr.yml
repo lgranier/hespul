@@ -1,0 +1,4 @@
+fr:
+  date:
+    order: ["day",  "month", "year"]
+    month_names: [nil,"janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"]

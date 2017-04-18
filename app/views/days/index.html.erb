@@ -1,0 +1,28 @@
+<%= search_form_for @search do |f| %>
+	<div class="row">
+
+		<%= f.label 'Date' %>
+	  	<%= f.date_select :date_gteq,  {:order=>[:day,:month,:year] ,  :default => @the_date, :include_blank=> @the_date.nil? , :use_month_names => [nil,"janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"]} %>
+	  	<%= f.date_select :date_lteq,  {:order=>[:day,:month,:year] ,  :default => @the_date, :include_blank=> @the_date.nil? , :use_month_names => [nil,"janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"]} %>
+	  	<%= f.submit "Search" %>
+	</div>
+<% end %>
+<%= flash[:notice] %>
+<table>
+	<thead>
+		<tr>
+			<th>Onduleur</th>
+			<th>date</th>
+			<th>Energie</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @days.each do |day| %>
+		<tr>
+			<td><%= day.onduleur_id %></td>
+			<td><%= day.date.strftime("%d/%m/%y") %></td>
+			<td><%= day.energie %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  onduleur_id: 1
+  date: 2017-04-18
+  energie: 1.5
+
+two:
+  onduleur_id: 1
+  date: 2017-04-18
+  energie: 1.5
